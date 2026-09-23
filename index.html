@@ -6,22 +6,170 @@
 <title>Sabor e Prosa Marmita</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#fff8ed;color:#222}
+header{background:#171717;color:white;padding:18px 20px;text-align:center;position:sticky;top:0;z-index:10}
+header h1{font-size:25px}
+header span{color:#f5a623}
+nav{margin-top:12px}
+nav a{color:white;text-decoration:none;margin:0 8px;font-weight:bold}
+
+.hero{
+min-height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px 20px;
+color:white;
+background:linear-gradient(#0009,#000c),
+url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80") center/cover
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff8ed;
-  color:#171717;
+.hero h2{font-size:48px;margin-bottom:15px}
+.hero h2 span{color:#f5a623}
+.hero p{font-size:19px;line-height:1.6;margin-bottom:25px}
+.btn{display:inline-block;background:#d93625;color:white;text-decoration:none;padding:15px 25px;border-radius:10px;font-weight:bold}
+
+section{padding:65px 20px}
+.container{max-width:1050px;margin:auto}
+.titulo{text-align:center;margin-bottom:35px}
+.titulo small{color:#d93625;font-weight:bold}
+.titulo h2{font-size:36px;margin-top:8px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:18px;padding:25px;text-align:center;box-shadow:0 8px 25px #0001}
+.card .emoji{font-size:50px}
+.card h3{font-size:23px;margin:15px 0 8px}
+.card p{color:#666;line-height:1.5}
+.preco{display:block;color:#d93625;font-size:27px;font-weight:bold;margin:18px 0}
+.card a{background:#171717;color:white;text-decoration:none;padding:11px 20px;border-radius:8px;display:inline-block;font-weight:bold}
+
+#sobre{background:#171717;color:white;text-align:center}
+#sobre p{max-width:700px;margin:15px auto;line-height:1.7;color:#ccc}
+#contato{text-align:center}
+.telefone{font-size:25px;font-weight:bold;margin:20px}
+
+footer{background:#111;color:#aaa;text-align:center;padding:25px}
+
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25d366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 20px #0005;
+z-index:20
 }
 
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
+@media(max-width:700px){
+.cards{grid-template-columns:1fr}
+.hero h2{font-size:40px}
+nav a{font-size:14px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🍲 Sabor <span>&</span> Prosa</h1>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#cardapio">Marmitas</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<div>
+<h2>Restaurante<br><span>Sabor e Prosa</span></h2>
+<p>Comida caseira, saborosa e preparada com carinho.</p>
+<a class="btn" href="https://wa.me/553898543588?text=Olá!%20Quero%20fazer%20um%20pedido." target="_blank">
+📲 Fazer pedido
+</a>
+</div>
+</section>
+
+<section id="cardapio">
+<div class="container">
+
+<div class="titulo">
+<small>🔥 NOSSO CARDÁPIO</small>
+<h2>Escolha sua Marmita</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="emoji">🍱</div>
+<h3>Marmita Pequena</h3>
+<p>Uma opção deliciosa para uma refeição saborosa.</p>
+<span class="preco">R$ 10,90</span>
+<a href="https://wa.me/553898543588?text=Olá!%20Quero%20uma%20Marmita%20Pequena." target="_blank">Pedir</a>
+</div>
+
+<div class="card">
+<div class="emoji">🍛</div>
+<h3>Marmita Média</h3>
+<p>Mais sabor e uma porção caprichada para sua refeição.</p>
+<span class="preco">R$ 13,90</span>
+<a href="https://wa.me/553898543588?text=Olá!%20Quero%20uma%20Marmita%20Média." target="_blank">Pedir</a>
+</div>
+
+<div class="card">
+<div class="emoji">🍲</div>
+<h3>Marmita Grande</h3>
+<p>Uma refeição completa para quem está com bastante fome.</p>
+<span class="preco">R$ 16,90</span>
+<a href="https://wa.me/553898543588?text=Olá!%20Quero%20uma%20Marmita%20Grande." target="_blank">Pedir</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="sobre">
+<div class="container">
+<div class="titulo">
+<small>❤️ SOBRE NÓS</small>
+<h2>Comida que combina com boa prosa</h2>
+</div>
+<p>O Restaurante Sabor e Prosa Marmita prepara refeições saborosas para você aproveitar aquele gostinho especial de comida caseira.</p>
+<p>Escolha sua marmita e fale com a gente pelo WhatsApp.</p>
+</div>
+</section>
+
+<section id="contato">
+<div class="container">
+<div class="titulo">
+<small>📞 FALE CONOSCO</small>
+<h2>Faça seu pedido</h2>
+</div>
+
+<div class="telefone">(38) 9854-3588</div>
+
+<a class="btn" href="https://wa.me/553898543588?text=Olá!%20Quero%20fazer%20um%20pedido." target="_blank">
+💬 Pedir pelo WhatsApp
+</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Restaurante Sabor e Prosa Marmita</p>
+<p style="margin-top:8px">Sabor, carinho e boa prosa ❤️</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/553898543588?text=Olá!%20Quero%20fazer%20um%20pedido." target="_blank">💬</a>
+
+</body>
+</html>
